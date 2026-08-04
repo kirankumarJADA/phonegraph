@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: phonegraph-pgvector
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=phonegraph
+      - POSTGRES_USER=phonegraph
+      - POSTGRES_PASSWORD=phonegraph2024
+    volumes:
+      - pgvector_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  pgvector_data:

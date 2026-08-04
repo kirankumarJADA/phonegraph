@@ -1,0 +1,74 @@
+PHONEGRAPH DISSERTATION — FULL ABLATION STUDY ANALYSIS
+======================================================================
+
+2x3 ABLATION GRID — Hallucination Rate
+----------------------------------------------------------------------
+Retrieval      Unconstrained       Constrained         Relative reduction
+Vector-only    42.4% (VanillaRAG)  10.8%               -75%
+Graph-only     58.4% (BM25)        13.6%               -77%
+Hybrid         38.4%               9.2% (PhoneGraph)   -76%
+
+======================================================================
+McNEMAR'S TEST — constrained vs unconstrained (same retrieval, paired)
+======================================================================
+Vector-only: constrained vs unconstrained:
+  b=84, c=5, statistic=68.360, p < 0.001 ***
+
+Graph-only: constrained vs unconstrained:
+  b=118, c=6, statistic=99.363, p < 0.001 ***
+
+Hybrid: constrained vs unconstrained:
+  b=78, c=5, statistic=62.458, p < 0.001 ***
+
+(b = questions where the CONSTRAINED condition was correct but the
+UNCONSTRAINED condition hallucinated; c = the reverse)
+
+======================================================================
+McNEMAR'S TEST — retrieval strategy comparison (constrained only)
+======================================================================
+Hybrid vs Vector-only (both constrained): b=15, c=11, p = 0.5563 (ns)
+Hybrid vs Graph-only (both constrained): b=29, c=18, p = 0.1447 (ns)
+
+IMPORTANT CAVEAT: Within the constrained condition, hybrid retrieval's
+small hallucination edge over vector-only (9.2% vs 10.8%) and graph-only
+(9.2% vs 13.6%) is NOT statistically significant at n=250. This should
+be reported honestly as a directional trend, not a proven effect.
+
+======================================================================
+METHODOLOGY NOTE
+======================================================================
+"Constrained generation" in this ablation is operationalised as a strict
+system prompt (enumerated rules forbidding invented phone names/specs,
+restricting output to the retrieved candidate set) versus a loose,
+unconstrained prompt using the same candidate data. This is a lighter-
+weight operationalisation than the structured function-call slot-filling
+described in the original proposal (Section 3.4); the prompt-based
+approach was used to keep evaluation time and NVIDIA API load tractable
+given the project timeline. This should be noted as a scope decision in
+the methodology chapter, with function-call-based constrained generation
+suggested as future work.
+
+======================================================================
+SUMMARY FOR DISSERTATION
+======================================================================
+
+The ablation study isolates two largely independent design decisions:
+
+1. RETRIEVAL STRATEGY (vector-only / graph-only / hybrid) primarily
+   affects RANKING QUALITY (P@5, MRR, nDCG@10). Graph-only retrieval
+   alone performs poorly on ranking (P@5=0.008); vector-only and hybrid
+   both perform much better and similarly to each other (P@5~0.127-0.128).
+
+2. CONSTRAINED GENERATION (strict vs loose prompting) primarily affects
+   HALLUCINATION RATE, cutting it by 75-77% relative, CONSISTENTLY
+   across all three retrieval strategies (McNemar p<0.001 in each case,
+   n=250 per condition). This is strong evidence the two components act
+   on different, largely independent failure modes.
+
+PhoneGraph's full architecture (hybrid retrieval + constrained generation)
+achieves the lowest hallucination rate of any condition tested (9.2%),
+combining the ranking-quality benefit of vector-inclusive retrieval with
+the hallucination-reduction benefit of constrained generation. However,
+the specific advantage of hybrid over vector-only retrieval, within the
+constrained condition, is directional but not statistically significant
+at this sample size and should be reported as such.

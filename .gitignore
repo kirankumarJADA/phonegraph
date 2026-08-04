@@ -1,0 +1,27 @@
+# ============================================================
+# PhoneGraph — root .gitignore
+# ============================================================
+
+# Maven build output (all services)
+**/target/
+
+# Application config files — contain real credentials (NVIDIA API key,
+# Neo4j/Postgres passwords). Never commit these. Copy the .example
+# version and fill in your own values locally instead.
+**/application.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.pyc

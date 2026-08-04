@@ -1,0 +1,2883 @@
+{
+  "benchmark_name": "PhoneGraph Evaluation Benchmark",
+  "total_questions": 250,
+  "categories": {
+    "factual_lookup": 50,
+    "two_device_comparison": 50,
+    "recommendation_with_constraints": 50,
+    "complex_multi_attribute": 50,
+    "adversarial_typo": 15,
+    "adversarial_ambiguous": 15,
+    "adversarial_ood": 20
+  },
+  "source_dataset": "smartphone_specs_dataset_2015_2024.csv",
+  "source_phone_count": 2000,
+  "questions": [
+    {
+      "id": "Q001",
+      "category": "factual_lookup",
+      "question": "What is the battery capacity of the iPhone 13 47 Ultra?",
+      "ground_truth": "4422",
+      "relevant_phones": [
+        "iPhone 13 47 Ultra"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q002",
+      "category": "factual_lookup",
+      "question": "How much RAM does the Xiaomi Mi 11 have?",
+      "ground_truth": "8",
+      "relevant_phones": [
+        "Xiaomi Mi 11"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q003",
+      "category": "factual_lookup",
+      "question": "What is the storage capacity of the Apple iPhone 13 Mini?",
+      "ground_truth": "128",
+      "relevant_phones": [
+        "Apple iPhone 13 Mini"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q004",
+      "category": "factual_lookup",
+      "question": "What is the price of the 8 Pro 56+?",
+      "ground_truth": "299",
+      "relevant_phones": [
+        "8 Pro 56+"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q005",
+      "category": "factual_lookup",
+      "question": "What chipset does the Black Shark 5 83s use?",
+      "ground_truth": "Snapdragon 8 Gen 3",
+      "relevant_phones": [
+        "Black Shark 5 83s"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q006",
+      "category": "factual_lookup",
+      "question": "What is the main camera specification of the Oppo A1 87 Pro?",
+      "ground_truth": "50MP+2MP",
+      "relevant_phones": [
+        "Oppo A1 87 Pro"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q007",
+      "category": "factual_lookup",
+      "question": "What is the display size of the HTC Desire 22 Pro?",
+      "ground_truth": "6.6",
+      "relevant_phones": [
+        "HTC Desire 22 Pro"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q008",
+      "category": "factual_lookup",
+      "question": "What year was the Vivo X70 Pro+ released?",
+      "ground_truth": "2021",
+      "relevant_phones": [
+        "Vivo X70 Pro+"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q009",
+      "category": "factual_lookup",
+      "question": "What operating system does the Nova 6 30 5G run?",
+      "ground_truth": "Android 10",
+      "relevant_phones": [
+        "Nova 6 30 5G"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q010",
+      "category": "factual_lookup",
+      "question": "How much does the Samsung Galaxy A03s weigh?",
+      "ground_truth": "185",
+      "relevant_phones": [
+        "Samsung Galaxy A03s"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q011",
+      "category": "factual_lookup",
+      "question": "What is the battery capacity of the Y12 21 Max?",
+      "ground_truth": "6000",
+      "relevant_phones": [
+        "Y12 21 Max"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q012",
+      "category": "factual_lookup",
+      "question": "How much RAM does the TCL 10 25 Plus have?",
+      "ground_truth": "4",
+      "relevant_phones": [
+        "TCL 10 25 Plus"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q013",
+      "category": "factual_lookup",
+      "question": "What is the storage capacity of the Redmi 11 27?",
+      "ground_truth": "64",
+      "relevant_phones": [
+        "Redmi 11 27"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q014",
+      "category": "factual_lookup",
+      "question": "What is the price of the Xperia 10 41 Neo?",
+      "ground_truth": "229",
+      "relevant_phones": [
+        "Xperia 10 41 Neo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q015",
+      "category": "factual_lookup",
+      "question": "What chipset does the Huawei Mate 60 Pro+ use?",
+      "ground_truth": "Kirin 9000S",
+      "relevant_phones": [
+        "Huawei Mate 60 Pro+"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q016",
+      "category": "factual_lookup",
+      "question": "What is the main camera specification of the Redmi 12 17 5G?",
+      "ground_truth": "13MP+2MP+2MP",
+      "relevant_phones": [
+        "Redmi 12 17 5G"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q017",
+      "category": "factual_lookup",
+      "question": "What is the display size of the Narzo 50 62 Max?",
+      "ground_truth": "6.6",
+      "relevant_phones": [
+        "Narzo 50 62 Max"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q018",
+      "category": "factual_lookup",
+      "question": "What year was the Google Pixel 8 released?",
+      "ground_truth": "2023",
+      "relevant_phones": [
+        "Google Pixel 8"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q019",
+      "category": "factual_lookup",
+      "question": "What operating system does the Google Pixel 9 Pro XL run?",
+      "ground_truth": "Android 14",
+      "relevant_phones": [
+        "Google Pixel 9 Pro XL"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q020",
+      "category": "factual_lookup",
+      "question": "How much does the Samsung Galaxy A05s weigh?",
+      "ground_truth": "185",
+      "relevant_phones": [
+        "Samsung Galaxy A05s"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q021",
+      "category": "factual_lookup",
+      "question": "What is the battery capacity of the Tecno Spark 20 Pro?",
+      "ground_truth": "5000",
+      "relevant_phones": [
+        "Tecno Spark 20 Pro"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q022",
+      "category": "factual_lookup",
+      "question": "How much RAM does the iPhone 11 17s have?",
+      "ground_truth": "12",
+      "relevant_phones": [
+        "iPhone 11 17s"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q023",
+      "category": "factual_lookup",
+      "question": "What is the storage capacity of the Xperia L 49 Lite?",
+      "ground_truth": "64",
+      "relevant_phones": [
+        "Xperia L 49 Lite"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q024",
+      "category": "factual_lookup",
+      "question": "What is the price of the Zenfone 9 42 SE?",
+      "ground_truth": "499",
+      "relevant_phones": [
+        "Zenfone 9 42 SE"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q025",
+      "category": "factual_lookup",
+      "question": "What chipset does the Apple iPhone 12 use?",
+      "ground_truth": "Apple A14",
+      "relevant_phones": [
+        "Apple iPhone 12"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q026",
+      "category": "factual_lookup",
+      "question": "What is the main camera specification of the Oppo A7 76 SE?",
+      "ground_truth": "50MP+8MP+2MP",
+      "relevant_phones": [
+        "Oppo A7 76 SE"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q027",
+      "category": "factual_lookup",
+      "question": "What is the display size of the Nokia 9 PureView?",
+      "ground_truth": "5.8",
+      "relevant_phones": [
+        "Nokia 9 PureView"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q028",
+      "category": "factual_lookup",
+      "question": "What year was the X90 75 released?",
+      "ground_truth": "2023",
+      "relevant_phones": [
+        "X90 75"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q029",
+      "category": "factual_lookup",
+      "question": "What operating system does the Pixel 6 90 Plus run?",
+      "ground_truth": "Android 14",
+      "relevant_phones": [
+        "Pixel 6 90 Plus"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q030",
+      "category": "factual_lookup",
+      "question": "How much does the POCO F5 43 Neo weigh?",
+      "ground_truth": "204",
+      "relevant_phones": [
+        "POCO F5 43 Neo"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q031",
+      "category": "factual_lookup",
+      "question": "What is the battery capacity of the Magic 4 93s?",
+      "ground_truth": "5000",
+      "relevant_phones": [
+        "Magic 4 93s"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q032",
+      "category": "factual_lookup",
+      "question": "How much RAM does the Infinix Hot 30 have?",
+      "ground_truth": "8",
+      "relevant_phones": [
+        "Infinix Hot 30"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q033",
+      "category": "factual_lookup",
+      "question": "What is the storage capacity of the Edge 50 29 SE?",
+      "ground_truth": "256",
+      "relevant_phones": [
+        "Edge 50 29 SE"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q034",
+      "category": "factual_lookup",
+      "question": "What is the price of the iQOO 11 77s?",
+      "ground_truth": "699",
+      "relevant_phones": [
+        "iQOO 11 77s"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q035",
+      "category": "factual_lookup",
+      "question": "What chipset does the Play 5 92 Ultra use?",
+      "ground_truth": "Dimensity 7050",
+      "relevant_phones": [
+        "Play 5 92 Ultra"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q036",
+      "category": "factual_lookup",
+      "question": "What is the main camera specification of the Nokia 7 98 Pro?",
+      "ground_truth": "48MP+5MP+2MP",
+      "relevant_phones": [
+        "Nokia 7 98 Pro"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q037",
+      "category": "factual_lookup",
+      "question": "What is the display size of the Moto E40 24 Ultra?",
+      "ground_truth": "6.6",
+      "relevant_phones": [
+        "Moto E40 24 Ultra"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q038",
+      "category": "factual_lookup",
+      "question": "What year was the Samsung Galaxy S22 Ultra released?",
+      "ground_truth": "2022",
+      "relevant_phones": [
+        "Samsung Galaxy S22 Ultra"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q039",
+      "category": "factual_lookup",
+      "question": "What operating system does the Zero 30 48 run?",
+      "ground_truth": "Android 12",
+      "relevant_phones": [
+        "Zero 30 48"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q040",
+      "category": "factual_lookup",
+      "question": "How much does the Find X5 54 Pro weigh?",
+      "ground_truth": "186",
+      "relevant_phones": [
+        "Find X5 54 Pro"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q041",
+      "category": "factual_lookup",
+      "question": "What is the battery capacity of the Samsung Galaxy A50s?",
+      "ground_truth": "4000",
+      "relevant_phones": [
+        "Samsung Galaxy A50s"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q042",
+      "category": "factual_lookup",
+      "question": "How much RAM does the X90 25 Max have?",
+      "ground_truth": "8",
+      "relevant_phones": [
+        "X90 25 Max"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q043",
+      "category": "factual_lookup",
+      "question": "What is the storage capacity of the iQOO Neo 9 37 SE?",
+      "ground_truth": "128",
+      "relevant_phones": [
+        "iQOO Neo 9 37 SE"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q044",
+      "category": "factual_lookup",
+      "question": "What is the price of the Oppo A7 5 Ultra?",
+      "ground_truth": "299",
+      "relevant_phones": [
+        "Oppo A7 5 Ultra"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q045",
+      "category": "factual_lookup",
+      "question": "What chipset does the TCL 30 5G use?",
+      "ground_truth": "Snapdragon 480+",
+      "relevant_phones": [
+        "TCL 30 5G"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q046",
+      "category": "factual_lookup",
+      "question": "What is the main camera specification of the Honor Magic 2?",
+      "ground_truth": "16MP+24MP+16MP",
+      "relevant_phones": [
+        "Honor Magic 2"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q047",
+      "category": "factual_lookup",
+      "question": "What is the display size of the TCL 40 94 5G?",
+      "ground_truth": "6.74",
+      "relevant_phones": [
+        "TCL 40 94 5G"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q048",
+      "category": "factual_lookup",
+      "question": "What year was the iQOO Z9 88 Pro released?",
+      "ground_truth": "2024",
+      "relevant_phones": [
+        "iQOO Z9 88 Pro"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q049",
+      "category": "factual_lookup",
+      "question": "What operating system does the Xperia 10 22 Pro run?",
+      "ground_truth": "Android 13",
+      "relevant_phones": [
+        "Xperia 10 22 Pro"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q050",
+      "category": "factual_lookup",
+      "question": "How much does the TCL 50 XE weigh?",
+      "ground_truth": "190",
+      "relevant_phones": [
+        "TCL 50 XE"
+      ],
+      "difficulty": "easy"
+    },
+    {
+      "id": "Q051",
+      "category": "two_device_comparison",
+      "question": "Which phone is cheaper: the Reno 8 78 Neo or the Samsung Galaxy A12?",
+      "ground_truth": "Samsung Galaxy A12 (179)",
+      "relevant_phones": [
+        "Reno 8 78 Neo",
+        "Samsung Galaxy A12"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q052",
+      "category": "two_device_comparison",
+      "question": "Which phone is newer: the U23 Pro 86 SE or the X7 50 SE?",
+      "ground_truth": "U23 Pro 86 SE (2023)",
+      "relevant_phones": [
+        "U23 Pro 86 SE",
+        "X7 50 SE"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q053",
+      "category": "two_device_comparison",
+      "question": "Which phone has more RAM: the Camon 20 92 5G or the Blade V50 6 Plus?",
+      "ground_truth": "Blade V50 6 Plus (8)",
+      "relevant_phones": [
+        "Camon 20 92 5G",
+        "Blade V50 6 Plus"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q054",
+      "category": "two_device_comparison",
+      "question": "Which phone has more storage: the Huawei Mate 40 Pro or the Pixel 7a 11 SE?",
+      "ground_truth": "Huawei Mate 40 Pro (256)",
+      "relevant_phones": [
+        "Huawei Mate 40 Pro",
+        "Pixel 7a 11 SE"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q055",
+      "category": "two_device_comparison",
+      "question": "Which phone is cheaper: the Realme 12 Pro+ or the Nord N2 66 5G?",
+      "ground_truth": "Nord N2 66 5G (249)",
+      "relevant_phones": [
+        "Realme 12 Pro+",
+        "Nord N2 66 5G"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q056",
+      "category": "two_device_comparison",
+      "question": "Which phone is newer: the Zenfone 9 22 or the Nokia X3 40?",
+      "ground_truth": "Zenfone 9 22 (2023)",
+      "relevant_phones": [
+        "Zenfone 9 22",
+        "Nokia X3 40"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q057",
+      "category": "two_device_comparison",
+      "question": "Which phone is cheaper: the Fairphone 5 66+ or the C35 25 SE?",
+      "ground_truth": "C35 25 SE (129)",
+      "relevant_phones": [
+        "Fairphone 5 66+",
+        "C35 25 SE"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q058",
+      "category": "two_device_comparison",
+      "question": "Which phone has a bigger battery: the Xiaomi Redmi Note 12 or the OnePlus 10 29s?",
+      "ground_truth": "Xiaomi Redmi Note 12 (5000)",
+      "relevant_phones": [
+        "Xiaomi Redmi Note 12",
+        "OnePlus 10 29s"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q059",
+      "category": "two_device_comparison",
+      "question": "Which phone has more RAM: the Magic 4 33 Max or the OnePlus 10 84s?",
+      "ground_truth": "OnePlus 10 84s (16)",
+      "relevant_phones": [
+        "Magic 4 33 Max",
+        "OnePlus 10 84s"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q060",
+      "category": "two_device_comparison",
+      "question": "Which phone has more RAM: the Razr 40 58 Ultra or the iPhone 11 17s?",
+      "ground_truth": "Razr 40 58 Ultra (16)",
+      "relevant_phones": [
+        "Razr 40 58 Ultra",
+        "iPhone 11 17s"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q061",
+      "category": "two_device_comparison",
+      "question": "Which phone is cheaper: the Fairphone 5 72 Neo or the Find X8 13 Neo?",
+      "ground_truth": "Fairphone 5 72 Neo (349)",
+      "relevant_phones": [
+        "Fairphone 5 72 Neo",
+        "Find X8 13 Neo"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q062",
+      "category": "two_device_comparison",
+      "question": "Which phone is cheaper: the Realme GT Neo 5 or the Hot 40 19 Pro?",
+      "ground_truth": "Hot 40 19 Pro (229)",
+      "relevant_phones": [
+        "Realme GT Neo 5",
+        "Hot 40 19 Pro"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q063",
+      "category": "two_device_comparison",
+      "question": "Which phone has more storage: the Samsung Galaxy A31 or the Nokia XR 24 Ultra?",
+      "ground_truth": "Nokia XR 24 Ultra (256)",
+      "relevant_phones": [
+        "Samsung Galaxy A31",
+        "Nokia XR 24 Ultra"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q064",
+      "category": "two_device_comparison",
+      "question": "Which phone is newer: the Play 6 33 Neo or the Axon 40 80?",
+      "ground_truth": "Axon 40 80 (2022)",
+      "relevant_phones": [
+        "Play 6 33 Neo",
+        "Axon 40 80"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q065",
+      "category": "two_device_comparison",
+      "question": "Which phone is cheaper: the Itel P40 or the POCO M5 16+?",
+      "ground_truth": "Itel P40 (99)",
+      "relevant_phones": [
+        "Itel P40",
+        "POCO M5 16+"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q066",
+      "category": "two_device_comparison",
+      "question": "Which phone has more storage: the Xperia Pro 84s or the Moto G50 99+?",
+      "ground_truth": "Xperia Pro 84s (256)",
+      "relevant_phones": [
+        "Xperia Pro 84s",
+        "Moto G50 99+"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q067",
+      "category": "two_device_comparison",
+      "question": "Which phone has a bigger battery: the Xperia Pro 56+ or the Motorola Moto G54?",
+      "ground_truth": "Motorola Moto G54 (6000)",
+      "relevant_phones": [
+        "Xperia Pro 56+",
+        "Motorola Moto G54"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q068",
+      "category": "two_device_comparison",
+      "question": "Which phone is newer: the POCO X6 29 5G or the Moto G100 78 Lite?",
+      "ground_truth": "Moto G100 78 Lite (2023)",
+      "relevant_phones": [
+        "POCO X6 29 5G",
+        "Moto G100 78 Lite"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q069",
+      "category": "two_device_comparison",
+      "question": "Which phone is cheaper: the Oppo A7 74 Ultra or the C25 29 5G?",
+      "ground_truth": "C25 29 5G (129)",
+      "relevant_phones": [
+        "Oppo A7 74 Ultra",
+        "C25 29 5G"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q070",
+      "category": "two_device_comparison",
+      "question": "Which phone has more storage: the Asus ROG Phone 5s or the iQOO Z5 65 Plus?",
+      "ground_truth": "Asus ROG Phone 5s (512)",
+      "relevant_phones": [
+        "Asus ROG Phone 5s",
+        "iQOO Z5 65 Plus"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q071",
+      "category": "two_device_comparison",
+      "question": "Which phone has more storage: the OnePlus Nord N 46 SE or the P30 Lite 39 Pro?",
+      "ground_truth": "P30 Lite 39 Pro (128)",
+      "relevant_phones": [
+        "OnePlus Nord N 46 SE",
+        "P30 Lite 39 Pro"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q072",
+      "category": "two_device_comparison",
+      "question": "Which phone has a bigger battery: the Realme 9 Pro+ or the Mate 60 25 SE?",
+      "ground_truth": "Mate 60 25 SE (5400)",
+      "relevant_phones": [
+        "Realme 9 Pro+",
+        "Mate 60 25 SE"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q073",
+      "category": "two_device_comparison",
+      "question": "Which phone is newer: the U23 Pro 29 Pro or the iQOO 10 79 Ultra?",
+      "ground_truth": "iQOO 10 79 Ultra (2022)",
+      "relevant_phones": [
+        "U23 Pro 29 Pro",
+        "iQOO 10 79 Ultra"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q074",
+      "category": "two_device_comparison",
+      "question": "Which phone is newer: the U23 Pro 15 5G or the P30 Lite 5 Max?",
+      "ground_truth": "P30 Lite 5 Max (2023)",
+      "relevant_phones": [
+        "U23 Pro 15 5G",
+        "P30 Lite 5 Max"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q075",
+      "category": "two_device_comparison",
+      "question": "Which phone has a bigger battery: the Nokia 7 92 Neo or the OnePlus 12 4 Lite?",
+      "ground_truth": "Nokia 7 92 Neo (5000)",
+      "relevant_phones": [
+        "Nokia 7 92 Neo",
+        "OnePlus 12 4 Lite"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q076",
+      "category": "two_device_comparison",
+      "question": "Which phone has more storage: the Oppo A54s or the X80 88+?",
+      "ground_truth": "X80 88+ (256)",
+      "relevant_phones": [
+        "Oppo A54s",
+        "X80 88+"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q077",
+      "category": "two_device_comparison",
+      "question": "Which phone has more RAM: the Nokia C32 or the Galaxy Z Flip 7 Pro?",
+      "ground_truth": "Galaxy Z Flip 7 Pro (8)",
+      "relevant_phones": [
+        "Nokia C32",
+        "Galaxy Z Flip 7 Pro"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q078",
+      "category": "two_device_comparison",
+      "question": "Which phone has a bigger battery: the Xperia Pro 42 Ultra or the Xiaomi Redmi Note 10?",
+      "ground_truth": "Xperia Pro 42 Ultra (5400)",
+      "relevant_phones": [
+        "Xperia Pro 42 Ultra",
+        "Xiaomi Redmi Note 10"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q079",
+      "category": "two_device_comparison",
+      "question": "Which phone has more storage: the Black Shark 5 29 SE or the Samsung Galaxy A30s?",
+      "ground_truth": "Black Shark 5 29 SE (256)",
+      "relevant_phones": [
+        "Black Shark 5 29 SE",
+        "Samsung Galaxy A30s"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q080",
+      "category": "two_device_comparison",
+      "question": "Which phone has more storage: the Pixel 6 53 Neo or the X7 66 SE?",
+      "ground_truth": "Pixel 6 53 Neo (256)",
+      "relevant_phones": [
+        "Pixel 6 53 Neo",
+        "X7 66 SE"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q081",
+      "category": "two_device_comparison",
+      "question": "Which phone is newer: the Nokia G3 16 Lite or the Galaxy F0 84+?",
+      "ground_truth": "Nokia G3 16 Lite (2021)",
+      "relevant_phones": [
+        "Nokia G3 16 Lite",
+        "Galaxy F0 84+"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q082",
+      "category": "two_device_comparison",
+      "question": "Which phone has more RAM: the Magic 4 9 Neo or the Desire 22 21 SE?",
+      "ground_truth": "Magic 4 9 Neo (16)",
+      "relevant_phones": [
+        "Magic 4 9 Neo",
+        "Desire 22 21 SE"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q083",
+      "category": "two_device_comparison",
+      "question": "Which phone has more RAM: the Spark 8 29 Neo or the TCL 50 90 Max?",
+      "ground_truth": "Spark 8 29 Neo (6)",
+      "relevant_phones": [
+        "Spark 8 29 Neo",
+        "TCL 50 90 Max"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q084",
+      "category": "two_device_comparison",
+      "question": "Which phone is newer: the Hot 20 22 SE or the Y15 13 Pro?",
+      "ground_truth": "Y15 13 Pro (2023)",
+      "relevant_phones": [
+        "Hot 20 22 SE",
+        "Y15 13 Pro"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q085",
+      "category": "two_device_comparison",
+      "question": "Which phone is cheaper: the Magic 5 35 Lite or the Fairphone 5 61 5G?",
+      "ground_truth": "Fairphone 5 61 5G (399)",
+      "relevant_phones": [
+        "Magic 5 35 Lite",
+        "Fairphone 5 61 5G"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q086",
+      "category": "two_device_comparison",
+      "question": "Which phone has more storage: the Xiaomi Mi 11 or the Phone 2a 18?",
+      "ground_truth": "Phone 2a 18 (512)",
+      "relevant_phones": [
+        "Xiaomi Mi 11",
+        "Phone 2a 18"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q087",
+      "category": "two_device_comparison",
+      "question": "Which phone has more RAM: the Blackview BL9000 Pro or the iQOO Neo 8 56 Max?",
+      "ground_truth": "Blackview BL9000 Pro (8)",
+      "relevant_phones": [
+        "Blackview BL9000 Pro",
+        "iQOO Neo 8 56 Max"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q088",
+      "category": "two_device_comparison",
+      "question": "Which phone is cheaper: the Xperia 10 43 Pro or the Fairphone 5 10?",
+      "ground_truth": "Xperia 10 43 Pro (349)",
+      "relevant_phones": [
+        "Xperia 10 43 Pro",
+        "Fairphone 5 10"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q089",
+      "category": "two_device_comparison",
+      "question": "Which phone has a bigger battery: the iQOO Neo 8 51 Plus or the POCO C4 98?",
+      "ground_truth": "POCO C4 98 (5000)",
+      "relevant_phones": [
+        "iQOO Neo 8 51 Plus",
+        "POCO C4 98"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q090",
+      "category": "two_device_comparison",
+      "question": "Which phone has more RAM: the Oppo A5 61 Plus or the Moto G52 10 SE?",
+      "ground_truth": "Moto G52 10 SE (8)",
+      "relevant_phones": [
+        "Oppo A5 61 Plus",
+        "Moto G52 10 SE"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q091",
+      "category": "two_device_comparison",
+      "question": "Which phone is cheaper: the Spark 10 1 5G or the X7 82 Ultra?",
+      "ground_truth": "Spark 10 1 5G (99)",
+      "relevant_phones": [
+        "Spark 10 1 5G",
+        "X7 82 Ultra"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q092",
+      "category": "two_device_comparison",
+      "question": "Which phone is newer: the X8 33 Pro or the iQOO Z6 4 SE?",
+      "ground_truth": "iQOO Z6 4 SE (2023)",
+      "relevant_phones": [
+        "X8 33 Pro",
+        "iQOO Z6 4 SE"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q093",
+      "category": "two_device_comparison",
+      "question": "Which phone has a bigger battery: the Pova 5 50 5G or the Nokia 9 PureView?",
+      "ground_truth": "Pova 5 50 5G (5000)",
+      "relevant_phones": [
+        "Pova 5 50 5G",
+        "Nokia 9 PureView"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q094",
+      "category": "two_device_comparison",
+      "question": "Which phone has a bigger battery: the Meizu 20 70 Max or the Moto E40 91 5G?",
+      "ground_truth": "Meizu 20 70 Max (5000)",
+      "relevant_phones": [
+        "Meizu 20 70 Max",
+        "Moto E40 91 5G"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q095",
+      "category": "two_device_comparison",
+      "question": "Which phone is newer: the Spark 20 78 SE or the Samsung Galaxy S24+?",
+      "ground_truth": "Samsung Galaxy S24+ (2024)",
+      "relevant_phones": [
+        "Spark 20 78 SE",
+        "Samsung Galaxy S24+"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q096",
+      "category": "two_device_comparison",
+      "question": "Which phone has more RAM: the C35 18 Plus or the Hot 40 4 5G?",
+      "ground_truth": "Hot 40 4 5G (8)",
+      "relevant_phones": [
+        "C35 18 Plus",
+        "Hot 40 4 5G"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q097",
+      "category": "two_device_comparison",
+      "question": "Which phone is cheaper: the Note 30 99+ or the Xperia L 52?",
+      "ground_truth": "Note 30 99+ (199)",
+      "relevant_phones": [
+        "Note 30 99+",
+        "Xperia L 52"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q098",
+      "category": "two_device_comparison",
+      "question": "Which phone has a bigger battery: the Meizu 21 35 5G or the Sony Xperia 1 IV?",
+      "ground_truth": "Sony Xperia 1 IV (5000)",
+      "relevant_phones": [
+        "Meizu 21 35 5G",
+        "Sony Xperia 1 IV"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q099",
+      "category": "two_device_comparison",
+      "question": "Which phone has more RAM: the X70 87 Neo or the Oppo A3 88 Ultra?",
+      "ground_truth": "X70 87 Neo (16)",
+      "relevant_phones": [
+        "X70 87 Neo",
+        "Oppo A3 88 Ultra"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q100",
+      "category": "two_device_comparison",
+      "question": "Which phone has more storage: the Huawei Pura 70 Pro+ or the P50 94+?",
+      "ground_truth": "Huawei Pura 70 Pro+ (1024)",
+      "relevant_phones": [
+        "Huawei Pura 70 Pro+",
+        "P50 94+"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q101",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $200 from OnePlus with 5G?",
+      "ground_truth": "Nord N2 70 Ultra ($199, 6GB RAM)",
+      "relevant_phones": [
+        "Nord N2 70 Ultra",
+        "OnePlus Nord N 46 SE",
+        "Nord CE 42s",
+        "OnePlus Nord N 56 Neo",
+        "Nord N1 86s"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q102",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $800 from TCL?",
+      "ground_truth": "TCL 50 XE ($249, 8GB RAM)",
+      "relevant_phones": [
+        "TCL 50 XE",
+        "TCL 30 5G",
+        "TCL 50 57 Max",
+        "TCL 50 8+",
+        "TCL 30 15 5G"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q103",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $1500?",
+      "ground_truth": "Asus ROG Phone 8 Pro ($1099, 24GB RAM)",
+      "relevant_phones": [
+        "Asus ROG Phone 8 Pro",
+        "Asus ROG Phone 5s",
+        "Asus ROG Phone 6 Pro",
+        "Asus ROG Phone 5 Ultimate",
+        "OnePlus 11R"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q104",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $600 from Nokia with NFC?",
+      "ground_truth": "Nokia G6 2s ($599, 12GB RAM)",
+      "relevant_phones": [
+        "Nokia G6 2s",
+        "Nokia XR 24 Ultra",
+        "Nokia X3 40",
+        "Nokia G4 63+",
+        "Nokia 8 80 Max"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q105",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $200?",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi Redmi 12",
+        "Xiaomi POCO C65",
+        "Infinix Hot 30",
+        "Realme C55"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q106",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $150 with 5G?",
+      "ground_truth": "Samsung Galaxy A05 ($129, 4GB RAM)",
+      "relevant_phones": [
+        "Samsung Galaxy A05",
+        "Samsung Galaxy A05s",
+        "Samsung Galaxy A03s"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q107",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $200 from Google with 5G?",
+      "ground_truth": "Pixel 4a 96 Max ($199, 6GB RAM)",
+      "relevant_phones": [
+        "Pixel 4a 96 Max",
+        "Pixel 6a 86 Neo",
+        "Pixel 7a 70 Pro",
+        "Pixel 7a 81 SE",
+        "Pixel 4a 25 Plus"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q108",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $400 from OnePlus?",
+      "ground_truth": "OnePlus Nord 2T ($399, 12GB RAM)",
+      "relevant_phones": [
+        "OnePlus Nord 2T",
+        "OnePlus Nord",
+        "OnePlus Nord 2",
+        "OnePlus Nord CE 3 Lite",
+        "OnePlus Nord CE 3"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q109",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $1500 from Fairphone?",
+      "ground_truth": "Fairphone 4 55 Max ($599, 12GB RAM)",
+      "relevant_phones": [
+        "Fairphone 4 55 Max",
+        "Fairphone 4 52 Max",
+        "Fairphone 5 10",
+        "Fairphone 5 66+",
+        "Fairphone 4 13 Max"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q110",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $600?",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Realme GT Neo 5",
+        "OnePlus 12R",
+        "Realme GT 6"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q111",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $600 from Xiaomi with 5G?",
+      "ground_truth": "Xiaomi POCO M6 Pro ($249, 12GB RAM)",
+      "relevant_phones": [
+        "Xiaomi POCO M6 Pro",
+        "Xiaomi POCO X6",
+        "Xiaomi Redmi Note 13 Pro",
+        "Xiaomi POCO X6 Pro",
+        "Xiaomi POCO F5"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q112",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $300?",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi POCO M6 Pro",
+        "Xiaomi POCO X6",
+        "Motorola Moto G84",
+        "Honor X9b"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q113",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $200 with 5G?",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Nokia G42",
+        "Samsung Galaxy M32",
+        "Samsung Galaxy F14 5G",
+        "Nothing CMF Phone 1"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q114",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $150 from Samsung with 5G?",
+      "ground_truth": "Samsung Galaxy A05 ($129, 4GB RAM)",
+      "relevant_phones": [
+        "Samsung Galaxy A05",
+        "Samsung Galaxy A05s",
+        "Samsung Galaxy A03s"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q115",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $300 from Sony with NFC?",
+      "ground_truth": "Sony Xperia L4 ($249, 8GB RAM)",
+      "relevant_phones": [
+        "Sony Xperia L4",
+        "Xperia 10 54s",
+        "Xperia L 41 Plus",
+        "Xperia 10 7 5G",
+        "Xperia L 80+"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q116",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $800 with NFC?",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Realme GT Neo 5",
+        "OnePlus 12R",
+        "Realme GT 6"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q117",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $250?",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi POCO M6 Pro",
+        "Xiaomi Redmi 12",
+        "Xiaomi POCO C65",
+        "Infinix Hot 30"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q118",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $150?",
+      "ground_truth": "Xiaomi Redmi 12 ($149, 8GB RAM)",
+      "relevant_phones": [
+        "Xiaomi Redmi 12",
+        "Xiaomi POCO C65",
+        "Infinix Hot 30",
+        "Samsung Galaxy A01",
+        "Samsung Galaxy M01"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q119",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $1000 with 5G?",
+      "ground_truth": "Asus ROG Phone 5s ($999, 18GB RAM)",
+      "relevant_phones": [
+        "Asus ROG Phone 5s",
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Realme GT Neo 5",
+        "OnePlus 12R"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q120",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $300 with 5G?",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi POCO M6 Pro",
+        "Xiaomi POCO X6",
+        "Motorola Moto G84",
+        "Honor X9b"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q121",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $1500 from Huawei with NFC?",
+      "ground_truth": "Mate 60 37 Pro ($1099, 16GB RAM)",
+      "relevant_phones": [
+        "Mate 60 37 Pro",
+        "Pura 70 18 SE",
+        "P50 94+",
+        "Mate 60 41 Ultra",
+        "Pura 70 42 Neo"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q122",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $400 with 5G?",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi POCO M6 Pro",
+        "Xiaomi POCO X6",
+        "Motorola Moto G84",
+        "Honor X9b"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q123",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $400 with NFC?",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi POCO M6 Pro",
+        "Xiaomi POCO X6",
+        "Motorola Moto G84",
+        "Honor X9b"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q124",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $800 with 5G?",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Realme GT Neo 5",
+        "OnePlus 12R",
+        "Realme GT 6"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q125",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $200 from OnePlus with NFC?",
+      "ground_truth": "Nord N2 70 Ultra ($199, 6GB RAM)",
+      "relevant_phones": [
+        "Nord N2 70 Ultra",
+        "OnePlus Nord N 46 SE",
+        "Nord CE 42s",
+        "OnePlus Nord N 56 Neo",
+        "Nord N1 86s"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q126",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $200 from Sony?",
+      "ground_truth": "Xperia L 29 5G ($199, 6GB RAM)",
+      "relevant_phones": [
+        "Xperia L 29 5G",
+        "Xperia 10 88+",
+        "Xperia 10 47 Max",
+        "Xperia 10 35 Max",
+        "Xperia L 9 Plus"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q127",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $400?",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi POCO M6 Pro",
+        "Xiaomi POCO X6",
+        "Motorola Moto G84",
+        "Honor X9b"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q128",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $1000?",
+      "ground_truth": "Asus ROG Phone 5s ($999, 18GB RAM)",
+      "relevant_phones": [
+        "Asus ROG Phone 5s",
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Realme GT Neo 5",
+        "OnePlus 12R"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q129",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $250 from Infinix?",
+      "ground_truth": "Infinix Hot 30 ($149, 8GB RAM)",
+      "relevant_phones": [
+        "Infinix Hot 30",
+        "Smart 7 38 Ultra",
+        "Smart 6 42+",
+        "Hot 20 80 Ultra",
+        "Zero 30 3 Ultra"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q130",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $800 from Samsung?",
+      "ground_truth": "Galaxy A7 50 Max ($599, 12GB RAM)",
+      "relevant_phones": [
+        "Galaxy A7 50 Max",
+        "Galaxy A5 4s",
+        "Galaxy A7 41 Max",
+        "Galaxy F5 70 5G",
+        "Galaxy F5 84 SE"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q131",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $500?",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Motorola Moto G54",
+        "Xiaomi POCO M6 Pro",
+        "Xiaomi POCO X6"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q132",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $200 with NFC?",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi Redmi 12",
+        "Nokia G42",
+        "Xiaomi POCO M4 Pro",
+        "Realme Narzo 50"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q133",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $1500 from Nothing with 5G?",
+      "ground_truth": "Nothing Phone 2a ($349, 12GB RAM)",
+      "relevant_phones": [
+        "Nothing Phone 2a",
+        "Nothing Phone 2a Plus",
+        "Nothing Phone 1",
+        "Phone 2 48+",
+        "Phone 2 93 SE"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q134",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $500 from Tecno?",
+      "ground_truth": "Tecno Spark 20 Pro ($179, 8GB RAM)",
+      "relevant_phones": [
+        "Tecno Spark 20 Pro",
+        "Tecno Camon 20 Pro",
+        "Pova 5 98s",
+        "Camon 20 37+",
+        "Spark 20 83 Lite"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q135",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $600 from Nothing with 5G?",
+      "ground_truth": "Nothing Phone 2a ($349, 12GB RAM)",
+      "relevant_phones": [
+        "Nothing Phone 2a",
+        "Nothing Phone 2a Plus",
+        "Nothing Phone 1",
+        "Phone 2 48+",
+        "Phone 2 93 SE"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q136",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $1500 from Xiaomi?",
+      "ground_truth": "Xiaomi 14 Pro ($999, 16GB RAM)",
+      "relevant_phones": [
+        "Xiaomi 14 Pro",
+        "Xiaomi 14 45 5G",
+        "Xiaomi 13 65 Neo",
+        "Mi 10 32 Neo",
+        "Mi 10 50 Lite"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q137",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $1500 with NFC?",
+      "ground_truth": "Asus ROG Phone 8 Pro ($1099, 24GB RAM)",
+      "relevant_phones": [
+        "Asus ROG Phone 8 Pro",
+        "Asus ROG Phone 5s",
+        "Asus ROG Phone 6 Pro",
+        "Asus ROG Phone 5 Ultimate",
+        "OnePlus 11R"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q138",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $600 from Honor with 5G?",
+      "ground_truth": "Honor X9b ($299, 12GB RAM)",
+      "relevant_phones": [
+        "Honor X9b",
+        "Honor 90",
+        "Honor 60 Pro",
+        "Honor 90 Pro",
+        "90 Pro 85 5G"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q139",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $1000 from Infinix with 5G?",
+      "ground_truth": "Infinix Zero 30 5G ($299, 8GB RAM)",
+      "relevant_phones": [
+        "Infinix Zero 30 5G",
+        "Note 30 72 Max",
+        "Note 30 24 Ultra",
+        "Zero 30 48",
+        "Hot 40 4 5G"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q140",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $500 with NFC?",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Motorola Moto G54",
+        "Xiaomi POCO M6 Pro",
+        "Xiaomi POCO X6"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q141",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $600 from Motorola with NFC?",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Motorola Moto G84",
+        "Motorola Edge 50",
+        "Motorola Edge 50 Pro",
+        "Moto G Stylus 82 Neo"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q142",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $600 from Vivo?",
+      "ground_truth": "Vivo V30 Pro ($499, 12GB RAM)",
+      "relevant_phones": [
+        "Vivo V30 Pro",
+        "Vivo V25 Pro",
+        "Vivo V23 Pro",
+        "V30 99+",
+        "X60 29 5G"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q143",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $300 with NFC?",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi POCO M6 Pro",
+        "Xiaomi POCO X6",
+        "Motorola Moto G84",
+        "Honor X9b"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q144",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $250 from Tecno?",
+      "ground_truth": "Tecno Spark 20 Pro ($179, 8GB RAM)",
+      "relevant_phones": [
+        "Tecno Spark 20 Pro",
+        "Tecno Camon 20 Pro",
+        "Spark 10 72 Ultra",
+        "Pop 7 59",
+        "Spark 8 38 Max"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q145",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $1500 with 5G?",
+      "ground_truth": "Asus ROG Phone 8 Pro ($1099, 24GB RAM)",
+      "relevant_phones": [
+        "Asus ROG Phone 8 Pro",
+        "Asus ROG Phone 5s",
+        "Asus ROG Phone 6 Pro",
+        "Asus ROG Phone 5 Ultimate",
+        "OnePlus 11R"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q146",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $600 with NFC?",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Realme GT Neo 5",
+        "OnePlus 12R",
+        "Realme GT 6"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q147",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $150 from Xiaomi with NFC?",
+      "ground_truth": "Xiaomi Redmi 12 ($149, 8GB RAM)",
+      "relevant_phones": [
+        "Xiaomi Redmi 12",
+        "Xiaomi Redmi 10",
+        "Xiaomi POCO M3",
+        "Xiaomi Redmi 9",
+        "Xiaomi Redmi 9C"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q148",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $800 from TCL with NFC?",
+      "ground_truth": "TCL 50 57 Max ($299, 8GB RAM)",
+      "relevant_phones": [
+        "TCL 50 57 Max",
+        "TCL 50 8+",
+        "TCL 30 15 5G",
+        "TCL 30 36 Pro",
+        "TCL 30 4+"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q149",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $800?",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Realme GT Neo 5",
+        "OnePlus 12R",
+        "Realme GT 6"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q150",
+      "category": "recommendation_with_constraints",
+      "question": "What is the best phone under $250 from Huawei?",
+      "ground_truth": "Nova 7 2 ($199, 6GB RAM)",
+      "relevant_phones": [
+        "Nova 7 2",
+        "Nova 6 81 Max",
+        "P30 Lite 60+",
+        "Nova 6 39s",
+        "P30 Lite 76 Lite"
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "id": "Q151",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $500, at least 12GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM, 5000mAh)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi POCO F5 Pro"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q152",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $600, at least 12GB RAM, at least 5000mAh battery, and 5G support.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "Realme GT 5",
+        "OnePlus 11R",
+        "OnePlus Nord 3"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q153",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $500, at least 8GB RAM, at least 4500mAh battery, and 5G support.",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM, 5000mAh)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi POCO F5 Pro"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q154",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $600, at least 6GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "Realme GT 5",
+        "OnePlus 11R",
+        "OnePlus Nord 3"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q155",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $600, at least 12GB RAM, and at least 4000mAh battery.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "Realme GT 5",
+        "OnePlus 11R",
+        "OnePlus Nord 3"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q156",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $600, at least 6GB RAM, at least 4500mAh battery, and 5G support.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "Realme GT 5",
+        "OnePlus 11R",
+        "OnePlus Nord 3"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q157",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $1500, at least 4GB RAM, at least 4500mAh battery, and 5G support.",
+      "ground_truth": "Asus ROG Phone 8 Pro ($1099, 24GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "Asus ROG Phone 8 Pro",
+        "Asus ROG Phone 5 Ultimate",
+        "Asus ROG Phone 5s",
+        "Asus ROG Phone 6 Pro",
+        "Asus ROG Phone 7 Ultimate"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q158",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $150, at least 4GB RAM, and at least 5000mAh battery.",
+      "ground_truth": "Xiaomi Redmi 12 ($149, 8GB RAM, 5000mAh)",
+      "relevant_phones": [
+        "Xiaomi Redmi 12",
+        "Infinix Hot 30",
+        "Nokia 5 80 Pro",
+        "Galaxy M0 68+",
+        "Nokia G1 82 SE"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q159",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $800, at least 6GB RAM, and at least 4000mAh battery.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "OnePlus 12",
+        "Realme GT 5 Pro",
+        "Realme GT 5"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q160",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $500, at least 6GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM, 5000mAh)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi POCO F5 Pro"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q161",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $600, at least 8GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "Realme GT 5",
+        "OnePlus 11R",
+        "OnePlus Nord 3"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q162",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $200, at least 12GB RAM, at least 4000mAh battery, and 5G support.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q163",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $150, at least 4GB RAM, and at least 4000mAh battery.",
+      "ground_truth": "Xiaomi Redmi 12 ($149, 8GB RAM, 5000mAh)",
+      "relevant_phones": [
+        "Xiaomi Redmi 12",
+        "Infinix Hot 30",
+        "Xiaomi POCO C65",
+        "Xiaomi POCO C55",
+        "Xiaomi 10C"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q164",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $150, at least 6GB RAM, and at least 4000mAh battery.",
+      "ground_truth": "Xiaomi Redmi 12 ($149, 8GB RAM, 5000mAh)",
+      "relevant_phones": [
+        "Xiaomi Redmi 12",
+        "Infinix Hot 30",
+        "Xiaomi POCO C65",
+        "Xiaomi POCO C55",
+        "Xiaomi 10C"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q165",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $200, at least 6GB RAM, at least 4500mAh battery, and 5G support.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Camon 20 92 5G",
+        "Play 6 33 Neo",
+        "Nova 7 2",
+        "Moto G53 2 Neo"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q166",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $500, at least 6GB RAM, at least 5000mAh battery, and 5G support.",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM, 5000mAh)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi POCO F5 Pro"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q167",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $200, at least 6GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi Redmi 12",
+        "Realme C55",
+        "Tecno Spark 20 Pro",
+        "Infinix Hot 30"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q168",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $600, at least 12GB RAM, and at least 5000mAh battery.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "Realme GT 5",
+        "OnePlus 11R",
+        "OnePlus Nord 3"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q169",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $1500, at least 6GB RAM, at least 4000mAh battery, and 5G support.",
+      "ground_truth": "Asus ROG Phone 8 Pro ($1099, 24GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "Asus ROG Phone 8 Pro",
+        "Asus ROG Phone 5 Ultimate",
+        "Asus ROG Phone 5s",
+        "Asus ROG Phone 6 Pro",
+        "Asus ROG Phone 7 Ultimate"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q170",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $400, at least 4GB RAM, at least 5000mAh battery, and 5G support.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi Redmi Note 13 Pro",
+        "Xiaomi POCO X6",
+        "Xiaomi Redmi Note 13 Pro+"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q171",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $500, at least 12GB RAM, and at least 5000mAh battery.",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM, 5000mAh)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi POCO F5 Pro"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q172",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $1000, at least 8GB RAM, at least 4000mAh battery, and 5G support.",
+      "ground_truth": "Asus ROG Phone 5s ($999, 18GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Asus ROG Phone 5s",
+        "OnePlus 12R",
+        "Realme GT 6",
+        "Asus ROG Phone 8",
+        "OnePlus 12"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q173",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $800, at least 4GB RAM, at least 4500mAh battery, and 5G support.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "OnePlus 12",
+        "Realme GT 5 Pro",
+        "Realme GT 5"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q174",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $800, at least 6GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "OnePlus 12",
+        "Realme GT 5 Pro",
+        "Realme GT 5"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q175",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $1000, at least 8GB RAM, at least 5000mAh battery, and 5G support.",
+      "ground_truth": "Asus ROG Phone 5s ($999, 18GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Asus ROG Phone 5s",
+        "OnePlus 12R",
+        "Realme GT 6",
+        "Asus ROG Phone 8",
+        "OnePlus 12"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q176",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $1000, at least 12GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "Asus ROG Phone 5s ($999, 18GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Asus ROG Phone 5s",
+        "Asus ROG Phone 3",
+        "OnePlus 12R",
+        "Realme GT 6",
+        "Asus ROG Phone 8"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q177",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $1500, at least 8GB RAM, at least 4500mAh battery, and 5G support.",
+      "ground_truth": "Asus ROG Phone 8 Pro ($1099, 24GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "Asus ROG Phone 8 Pro",
+        "Asus ROG Phone 5 Ultimate",
+        "Asus ROG Phone 5s",
+        "Asus ROG Phone 6 Pro",
+        "Asus ROG Phone 7 Ultimate"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q178",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $200, at least 8GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi Redmi 12",
+        "Realme C55",
+        "Tecno Spark 20 Pro",
+        "Infinix Hot 30"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q179",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $800, at least 12GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "OnePlus 12",
+        "Realme GT 5 Pro",
+        "Realme GT 5"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q180",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $400, at least 8GB RAM, at least 4500mAh battery, and 5G support.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi Redmi Note 13 Pro",
+        "Xiaomi POCO X6",
+        "Xiaomi Redmi Note 13 Pro+"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q181",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $200, at least 6GB RAM, and at least 5000mAh battery.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi Redmi 12",
+        "Realme C55",
+        "Tecno Spark 20 Pro",
+        "Infinix Hot 30"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q182",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $1000, at least 6GB RAM, and at least 5000mAh battery.",
+      "ground_truth": "Asus ROG Phone 5s ($999, 18GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Asus ROG Phone 5s",
+        "Asus ROG Phone 3",
+        "OnePlus 12R",
+        "Realme GT 6",
+        "Asus ROG Phone 8"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q183",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $800, at least 12GB RAM, and at least 4000mAh battery.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "OnePlus 12",
+        "Realme GT 5 Pro",
+        "Realme GT 5"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q184",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $300, at least 12GB RAM, and at least 5000mAh battery.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi POCO X6",
+        "Xiaomi POCO M6 Pro",
+        "Motorola Moto G84"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q185",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $500, at least 12GB RAM, at least 5000mAh battery, and 5G support.",
+      "ground_truth": "OnePlus 11R ($499, 16GB RAM, 5000mAh)",
+      "relevant_phones": [
+        "OnePlus 11R",
+        "OnePlus Nord 3",
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi POCO F5 Pro"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q186",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $300, at least 4GB RAM, and at least 5000mAh battery.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi POCO X6",
+        "Xiaomi POCO M6 Pro",
+        "Motorola Moto G84"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q187",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $200, at least 6GB RAM, and at least 4000mAh battery.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Xiaomi Redmi 12",
+        "Realme C55",
+        "Tecno Spark 20 Pro",
+        "Infinix Hot 30"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q188",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $800, at least 8GB RAM, at least 5000mAh battery, and 5G support.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "OnePlus 12",
+        "Realme GT 5 Pro",
+        "Realme GT 5"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q189",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $400, at least 6GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi Redmi Note 13 Pro",
+        "Xiaomi POCO X6",
+        "Xiaomi Redmi Note 13 Pro+"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q190",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $150, at least 6GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "Xiaomi Redmi 12 ($149, 8GB RAM, 5000mAh)",
+      "relevant_phones": [
+        "Xiaomi Redmi 12",
+        "Infinix Hot 30",
+        "Xiaomi POCO C65",
+        "Xiaomi POCO C55",
+        "Xiaomi 10C"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q191",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $800, at least 4GB RAM, at least 4000mAh battery, and 5G support.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "OnePlus 12",
+        "Realme GT 5 Pro",
+        "Realme GT 5"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q192",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $150, at least 8GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "Xiaomi Redmi 12 ($149, 8GB RAM, 5000mAh)",
+      "relevant_phones": [
+        "Xiaomi Redmi 12",
+        "Infinix Hot 30",
+        "Xiaomi POCO C65"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q193",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $200, at least 12GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q194",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $400, at least 4GB RAM, and at least 4000mAh battery.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi Redmi Note 13 Pro",
+        "Xiaomi POCO X6",
+        "Xiaomi Redmi Note 13 Pro+"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q195",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $600, at least 6GB RAM, and at least 5000mAh battery.",
+      "ground_truth": "OnePlus 12R ($599, 16GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "OnePlus 12R",
+        "Realme GT 6",
+        "Realme GT 5",
+        "OnePlus 11R",
+        "OnePlus Nord 3"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q196",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $1500, at least 12GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "Asus ROG Phone 8 Pro ($1099, 24GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "Asus ROG Phone 8 Pro",
+        "Asus ROG Phone 5 Ultimate",
+        "Asus ROG Phone 5s",
+        "Asus ROG Phone 6 Pro",
+        "Asus ROG Phone 7 Ultimate"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q197",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $400, at least 8GB RAM, at least 5000mAh battery, and 5G support.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi Redmi Note 13 Pro",
+        "Xiaomi POCO X6",
+        "Xiaomi Redmi Note 13 Pro+"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q198",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $1500, at least 6GB RAM, and at least 4500mAh battery.",
+      "ground_truth": "Asus ROG Phone 8 Pro ($1099, 24GB RAM, 5500mAh)",
+      "relevant_phones": [
+        "Asus ROG Phone 8 Pro",
+        "Asus ROG Phone 5 Ultimate",
+        "Asus ROG Phone 5s",
+        "Asus ROG Phone 6 Pro",
+        "Asus ROG Phone 7 Ultimate"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q199",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $300, at least 6GB RAM, at least 4500mAh battery, and 5G support.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Honor X9b",
+        "Xiaomi POCO X6",
+        "Xiaomi POCO M6 Pro",
+        "Motorola Moto G84"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q200",
+      "category": "complex_multi_attribute",
+      "question": "Find a phone priced under $200, at least 4GB RAM, at least 4000mAh battery, and 5G support.",
+      "ground_truth": "Motorola Moto G54 ($199, 12GB RAM, 6000mAh)",
+      "relevant_phones": [
+        "Motorola Moto G54",
+        "Camon 20 92 5G",
+        "Play 6 33 Neo",
+        "Nova 7 2",
+        "Moto G53 2 Neo"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q201",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the Meizu 21 1 9Pro?",
+      "ground_truth": "5000 (correct phone: Meizu 21 19 Pro)",
+      "relevant_phones": [
+        "Meizu 21 19 Pro"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q202",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the Galaxy F5 15 Ultra?",
+      "ground_truth": "5000 (correct phone: Galaxy F5 51 Ultra)",
+      "relevant_phones": [
+        "Galaxy F5 51 Ultra"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q203",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the iPhone SE4 2 Lite?",
+      "ground_truth": "5400 (correct phone: iPhone SE 42 Lite)",
+      "relevant_phones": [
+        "iPhone SE 42 Lite"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q204",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the Galaxy M25 0 Pro?",
+      "ground_truth": "5000 (correct phone: Galaxy M2 50 Pro)",
+      "relevant_phones": [
+        "Galaxy M2 50 Pro"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q205",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the Galxay A5 96 5G?",
+      "ground_truth": "5000 (correct phone: Galaxy A5 96 5G)",
+      "relevant_phones": [
+        "Galaxy A5 96 5G"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q206",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the iPohne 13 72s?",
+      "ground_truth": "4900 (correct phone: iPhone 13 72s)",
+      "relevant_phones": [
+        "iPhone 13 72s"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q207",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the Zero 30 04 Ultra?",
+      "ground_truth": "5000 (correct phone: Zero 30 40 Ultra)",
+      "relevant_phones": [
+        "Zero 30 40 Ultra"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q208",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the Huawei 4P0?",
+      "ground_truth": "4200 (correct phone: Huawei P40)",
+      "relevant_phones": [
+        "Huawei P40"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q209",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the Y155 7+?",
+      "ground_truth": "5000 (correct phone: Y15 57+)",
+      "relevant_phones": [
+        "Y15 57+"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q210",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the Find X 822?",
+      "ground_truth": "5400 (correct phone: Find X8 22)",
+      "relevant_phones": [
+        "Find X8 22"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q211",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the OnePlus Nodr 2 91 Lite?",
+      "ground_truth": "4500 (correct phone: OnePlus Nord 2 91 Lite)",
+      "relevant_phones": [
+        "OnePlus Nord 2 91 Lite"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q212",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the Noika G6 22 Pro?",
+      "ground_truth": "5000 (correct phone: Nokia G6 22 Pro)",
+      "relevant_phones": [
+        "Nokia G6 22 Pro"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q213",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the Pixle 8 88 Ultra?",
+      "ground_truth": "5400 (correct phone: Pixel 8 88 Ultra)",
+      "relevant_phones": [
+        "Pixel 8 88 Ultra"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q214",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the Desir e22 21 SE?",
+      "ground_truth": "5000 (correct phone: Desire 22 21 SE)",
+      "relevant_phones": [
+        "Desire 22 21 SE"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q215",
+      "category": "adversarial_typo",
+      "question": "What is the battery capacity of the Zero 30 10 rPo?",
+      "ground_truth": "5100 (correct phone: Zero 30 10 Pro)",
+      "relevant_phones": [
+        "Zero 30 10 Pro"
+      ],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q216",
+      "category": "adversarial_ambiguous",
+      "question": "What's a good phone?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q217",
+      "category": "adversarial_ambiguous",
+      "question": "Tell me about the new one.",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q218",
+      "category": "adversarial_ambiguous",
+      "question": "Is it worth buying?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q219",
+      "category": "adversarial_ambiguous",
+      "question": "What about the camera on that phone?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q220",
+      "category": "adversarial_ambiguous",
+      "question": "How does it compare to the other one?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q221",
+      "category": "adversarial_ambiguous",
+      "question": "Which phone should I get?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q222",
+      "category": "adversarial_ambiguous",
+      "question": "What's the best option?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q223",
+      "category": "adversarial_ambiguous",
+      "question": "Is this phone good value?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q224",
+      "category": "adversarial_ambiguous",
+      "question": "Tell me more about it.",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q225",
+      "category": "adversarial_ambiguous",
+      "question": "What's special about this one?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q226",
+      "category": "adversarial_ambiguous",
+      "question": "Should I upgrade to the newer model?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q227",
+      "category": "adversarial_ambiguous",
+      "question": "How good is the camera?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q228",
+      "category": "adversarial_ambiguous",
+      "question": "Is the battery life good?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q229",
+      "category": "adversarial_ambiguous",
+      "question": "What's the deal with this phone?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q230",
+      "category": "adversarial_ambiguous",
+      "question": "Can you recommend something similar?",
+      "ground_truth": "AMBIGUOUS \u2014 no specific phone referenced; correct response should ask for clarification",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q231",
+      "category": "adversarial_ood",
+      "question": "What is the battery capacity of the iPhone 20 Pro Max?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q232",
+      "category": "adversarial_ood",
+      "question": "Tell me about the Samsung Galaxy Z100.",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q233",
+      "category": "adversarial_ood",
+      "question": "What chipset does the Google Pixel 15 use?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q234",
+      "category": "adversarial_ood",
+      "question": "How much RAM does the Nokia 3350 have?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q235",
+      "category": "adversarial_ood",
+      "question": "What is the price of the OnePlus 20?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q236",
+      "category": "adversarial_ood",
+      "question": "Tell me about the Huawei P100.",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q237",
+      "category": "adversarial_ood",
+      "question": "What camera does the Xiaomi 20 Ultra have?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q238",
+      "category": "adversarial_ood",
+      "question": "How much does the Sony Xperia 3 VII cost?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q239",
+      "category": "adversarial_ood",
+      "question": "What is the best phone with a foldable holographic display?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q240",
+      "category": "adversarial_ood",
+      "question": "Which phone has a 1TB battery?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q241",
+      "category": "adversarial_ood",
+      "question": "What phone has negative price?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q242",
+      "category": "adversarial_ood",
+      "question": "Tell me about the Motorola Razr 3000.",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q243",
+      "category": "adversarial_ood",
+      "question": "What is the storage capacity of the Apple Vision Phone?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q244",
+      "category": "adversarial_ood",
+      "question": "How much RAM does the Nothing Phone 5 have?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q245",
+      "category": "adversarial_ood",
+      "question": "What is the release year of the Samsung Galaxy S99?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q246",
+      "category": "adversarial_ood",
+      "question": "Tell me about phones that don't have a battery.",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q247",
+      "category": "adversarial_ood",
+      "question": "What is the weight of a phone made of antimatter?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q248",
+      "category": "adversarial_ood",
+      "question": "Which phone costs exactly $0?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q249",
+      "category": "adversarial_ood",
+      "question": "What phone has 500GB of RAM?",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    },
+    {
+      "id": "Q250",
+      "category": "adversarial_ood",
+      "question": "Tell me about the Vivo X1000.",
+      "ground_truth": "OUT-OF-DISTRIBUTION \u2014 phone/spec does not exist in the knowledge graph; correct response should state this rather than inventing an answer",
+      "relevant_phones": [],
+      "difficulty": "hard"
+    }
+  ]
+}
