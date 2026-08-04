@@ -3,6 +3,7 @@ package com.phonegraph.orchestrator.controller;
 import com.phonegraph.orchestrator.model.RecommendationRequest;
 import com.phonegraph.orchestrator.model.RecommendationResponse;
 import com.phonegraph.orchestrator.service.BaselineService;
+import com.phonegraph.orchestrator.service.LangChain4jDemoService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 public class BaselineController {
 
     private final BaselineService baselineService;
+    private final LangChain4jDemoService langChain4jDemoService;
 
     @PostMapping("/zero-shot")
     public RecommendationResponse zeroShot(@Valid @RequestBody RecommendationRequest request) {
@@ -57,5 +59,15 @@ public class BaselineController {
     @PostMapping("/structured-function-calling")
     public RecommendationResponse structuredFunctionCalling(@Valid @RequestBody RecommendationRequest request) {
         return baselineService.structuredFunctionCalling(request.getQuery());
+    }
+
+    @PostMapping("/constrained-with-correction")
+    public RecommendationResponse constrainedWithCorrection(@Valid @RequestBody RecommendationRequest request) {
+        return baselineService.constrainedWithCorrection(request.getQuery());
+    }
+
+    @PostMapping("/langchain4j-demo")
+    public RecommendationResponse langChain4jDemo(@Valid @RequestBody RecommendationRequest request) {
+        return langChain4jDemoService.recommend(request.getQuery());
     }
 }

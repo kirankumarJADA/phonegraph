@@ -159,6 +159,61 @@ public class BaselineService {
     }
 
     // ================================================================
+    // CONSTRAINED GENERATION WITH CORRECTION LOOP (proposal Section 3.4,
+    // second strategy: "post-generation validation that triggers
+    // correction for any out-of-set token").
+    //
+    // Uses PhoneGraph's own hybrid retrieval + strict prompt to generate
+    // an initial answer, exactly as PhoneGraph does today. If the SHARED
+    // HallucinationChecker flags anything, this re-prompts the model ONCE
+    // with the specific flagged claims and asks it to correct them, then
+    // re-checks the corrected answer. This is additive — PhoneGraph's own
+    // endpoint and all already-evaluated conditions are untouched; this is
+    // a new, separately-testable path.
+    // ================================================================
+
+    public RecommendationResponse constrainedWithCorrection(String query) {
+        KgRetrievalResult retrieval = kgRetrievalClient.hybridSearch(query, null, null, 10);
+        List<Map<String, Object>> candidates = buildFusedCandidates(retrieval);
+
+        if (candidates.isEmpty()) {
+            return buildResponse("No phones found.", Collections.emptyList(),
+                    new HallucinationChecker.HallucinationResult(false, Collections.emptyList()),
+                    "constrained-with-correction");
+        }
+
+        String systemPrompt = promptBuilder.buildSystemPrompt();
+        String userPrompt = promptBuilder.buildUserPrompt(query, candidates);
+        String initialAnswer = llmClient.chat(systemPrompt, userPrompt);
+        var initialCheck = hallucinationChecker.check(initialAnswer, candidates);
+
+        if (!initialCheck.hallucinationDetected()) {
+            // Nothing to correct — behaves identically to runConstrained().
+            return buildResponse(initialAnswer, extractNames(candidates), initialCheck,
+                    "constrained-with-correction");
+        }
+
+        // Build a correction prompt naming the specific flagged claims and
+        // re-send it. This is the actual "triggers correction" mechanism —
+        // not just a stricter initial prompt, a real second pass conditioned
+        // on what was wrong with the first answer.
+        String flaggedList = String.join(", ", initialCheck.flaggedClaims());
+        String correctionPrompt = userPrompt
+                + "\n\nYour previous answer incorrectly mentioned: " + flaggedList + ". "
+                + "These are NOT in the candidate list above. Rewrite your answer using ONLY "
+                + "the phones and facts given — remove or replace anything not in that data.";
+
+        String correctedAnswer = llmClient.chat(systemPrompt, correctionPrompt);
+        var correctedCheck = hallucinationChecker.check(correctedAnswer, candidates);
+
+        String label = correctedCheck.hallucinationDetected()
+                ? "constrained-with-correction-still-flagged-after-retry"
+                : "constrained-with-correction-fixed";
+
+        return buildResponse(correctedAnswer, extractNames(candidates), correctedCheck, label);
+    }
+
+    // ================================================================
     // STRUCTURED / FUNCTION-CALL GENERATION (proposal Section 3.4)
     // Uses the SAME hybrid retrieval as PhoneGraph itself (buildFusedCandidates),
     // but instead of asking the LLM to write the final answer as free text,
@@ -293,7 +348,7 @@ public class BaselineService {
                 hallCheck, "structured-function-calling");
     }
 
-    private List<Map<String, Object>> buildFusedCandidates(KgRetrievalResult retrieval) {
+    static List<Map<String, Object>> buildFusedCandidates(KgRetrievalResult retrieval) {
         List<String> rankedNames = retrieval.getFusedRanking() != null
                 ? retrieval.getFusedRanking() : List.of();
         Map<String, Map<String, Object>> phoneLookup = new LinkedHashMap<>();
@@ -332,7 +387,7 @@ public class BaselineService {
         } catch (Exception e) { /* skip */ }
     }
 
-    private String formatCandidates(List<Map<String, Object>> candidates) {
+    static String formatCandidates(List<Map<String, Object>> candidates) {
         StringBuilder sb = new StringBuilder();
         for (Map<String, Object> phone : candidates) {
             String name = String.valueOf(phone.getOrDefault("name", phone.getOrDefault("phoneName", "Unknown")));
@@ -353,7 +408,7 @@ public class BaselineService {
         return sb.toString();
     }
 
-    private List<String> extractNames(List<Map<String, Object>> candidates) {
+    static List<String> extractNames(List<Map<String, Object>> candidates) {
         return candidates.stream()
                 .map(p -> String.valueOf(p.getOrDefault("name", p.getOrDefault("phoneName", "Unknown"))))
                 .collect(Collectors.toList());
