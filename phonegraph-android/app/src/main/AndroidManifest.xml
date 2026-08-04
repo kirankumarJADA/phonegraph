@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Required to call the PhoneGraph backend over the network -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="PhoneGraph"
+        android:theme="@style/Theme.PhoneGraph"
+        android:usesCleartextTraffic="true">
+        <!-- usesCleartextTraffic=true: the backend runs on plain HTTP on
+             localhost for this dissertation prototype, not HTTPS. This
+             would be removed/tightened for any real deployment. -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PhoneGraph">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
