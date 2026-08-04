@@ -1,0 +1,49 @@
+name: PhoneGraph CI
+
+# Builds every microservice independently (no shared parent pom exists
+# yet — each service has its own pom.xml). Runs on every push/PR to main.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        service:
+          - phonegraph-kg-retrieval
+          - phonegraph-llm-orchestrator
+          - phonegraph-evaluation
+          - phonegraph-gateway
+          - phonegraph-catalogue
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'maven'
+          cache-dependency-path: ${{ matrix.service }}/pom.xml
+
+      - name: Build and test ${{ matrix.service }}
+        working-directory: ${{ matrix.service }}
+        run: mvn -B clean verify
+
+      - name: Verify build artifact exists
+        working-directory: ${{ matrix.service }}
+        run: |
+          if [ -z "$(find target -maxdepth 1 -name '*.jar')" ]; then
+            echo "No jar produced in target/ — build did not succeed as expected."
+            exit 1
+          fi
+          echo "Build artifact found for ${{ matrix.service }}."
