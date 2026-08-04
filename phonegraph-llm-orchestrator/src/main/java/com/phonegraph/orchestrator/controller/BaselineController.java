@@ -53,4 +53,9 @@ public class BaselineController {
     public RecommendationResponse ablationHybridNoConstraints(@Valid @RequestBody RecommendationRequest request) {
         return baselineService.ablationHybridNoConstraints(request.getQuery());
     }
+
+    @PostMapping("/structured-function-calling")
+    public RecommendationResponse structuredFunctionCalling(@Valid @RequestBody RecommendationRequest request) {
+        return baselineService.structuredFunctionCalling(request.getQuery());
+    }
 }
