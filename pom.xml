@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.4</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.phonegraph</groupId>
+    <artifactId>phonegraph-parent</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>PhoneGraph Parent</name>
+    <description>
+        Parent aggregator for the PhoneGraph microservices (kg-retrieval,
+        llm-orchestrator, evaluation, gateway, catalogue). Unifies the
+        Spring Boot/Java version declaration across all five services via
+        a single `mvn clean install` from this root. Does not alter any
+        service's dependencies, source code, or runtime behaviour —
+        purely a build-organisation change. Part of the PhoneGraph
+        dissertation project - CMP7200 BCU.
+    </description>
+
+    <properties>
+        <java.version>21</java.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
+
+    <modules>
+        <module>phonegraph-kg-retrieval</module>
+        <module>phonegraph-llm-orchestrator</module>
+        <module>phonegraph-evaluation</module>
+        <module>phonegraph-gateway</module>
+        <module>phonegraph-catalogue</module>
+    </modules>
+</project>
